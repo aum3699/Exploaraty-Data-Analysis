@@ -1,0 +1,24 @@
+import pandas as pd
+data={
+    'Name':["Aum","Sai","Ram","sita","shiva","Narayana"],
+    'Age':[20,25,18,15,25,20],
+    'Marks':[100,90,75,80,77,50]
+}
+df=pd.DataFrame(data)
+df.to_csv("students.csv",index=False)
+df.to_csv("students.json",index=False)
+df.to_csv("students.xlsx",index=False)
+csv=pd.read_csv("students.csv")
+print("-"*6,"csv","-"*6)
+print(csv)
+print('-'*25)
+print("-"*6,"head()","-"*6)
+print(csv.head())
+print('-'*25)
+print("-"*6,"info()","-"*6)
+print(csv.info())
+print('-'*25)
+print("-"*6,"describe()","-"*6)
+print(csv.describe())
+print("-"*6,"shape","-"*6)
+print(csv.shape)
